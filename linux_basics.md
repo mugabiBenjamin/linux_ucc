@@ -36,33 +36,37 @@ shell
 
 ![Go Home](./images/go_home.png)
 
+```bash
+'cyberstarts{basic_user_access}'
+```
+
 ## Ticking Crony
 
 ![Ticking Crony](./images/ticking_crony.png)
 
 1. Login via ssh
 
-    ```bash
-    ssh ctfplayer@52.225.17.38
-    ctfplayer@52.225.17.38's password:
-    ```
+   ```bash
+   ssh ctfplayer@52.225.17.38
+   ctfplayer@52.225.17.38's password:
+   ```
 
 2. Search for recently modified files with 5 minutes
 
-    ```bash
-    ctfplayer@CTFDPROD:~$ 'find / -type f -mmin -5 2>/dev/null | grep -v "/proc\|/sys"'
-    '/var/ctf_flags/cron_flag.txt'
-    /var/log/journal/140608600ddd454c9e8a322679fcfd5d/user-1001.journal
-    /var/log/auth.log
-    /var/log/lastlog
-    /var/log/btmp
-    /var/log/wtmp
-    /run/motd.dynamic
-    /run/utmp
+   ```bash
+   ctfplayer@CTFDPROD:~$ 'find / -type f -mmin -5 2>/dev/null | grep -v "/proc\|/sys"'
+   '/var/ctf_flags/cron_flag.txt'
+   /var/log/journal/140608600ddd454c9e8a322679fcfd5d/user-1001.journal
+   /var/log/auth.log
+   /var/log/lastlog
+   /var/log/btmp
+   /var/log/wtmp
+   /run/motd.dynamic
+   /run/utmp
 
-    ctfplayer@CTFDPROD:~$ 'cat /var/ctf_flags/cron_flag.txt'
-    'cyberstars{cron_mastery}'
-    ```
+   ctfplayer@CTFDPROD:~$ 'cat /var/ctf_flags/cron_flag.txt'
+   'cyberstars{cron_mastery}'
+   ```
 
 ## Runus
 
@@ -70,49 +74,49 @@ shell
 
 1. Login via ssh
 
-    ```bash
-    ssh ctfplayer@52.225.17.38
-    ctfplayer@52.225.17.38's password:
-    ```
+   ```bash
+   ssh ctfplayer@52.225.17.38
+   ctfplayer@52.225.17.38's password:
+   ```
 
 2. List the files in the home directory
 
-    ```bash
-    ctfplayer@CTFDPROD:~$ 'ls -la'
-    total 2692
-    drwxr-x--- 11 ctfplayer ctfplayer    4096 Oct 22 13:41  .
-    drwxr-xr-x  4 root      root         4096 Aug 27 19:15  ..
-    -r--r--r--  1 root      root            0 Oct  3 09:00  .bash_history
-    drwx------  2 ctfplayer ctfplayer    4096 Oct 20 09:01  .cache
-    -rw-------  1 ctfplayer ctfplayer      20 Oct 22 13:41  .lesshst
-    drwxrwxr-x  3 ctfplayer ctfplayer    4096 Oct 21 11:51  .local
-    -rw-------  1 ctfplayer ctfplayer    1187 Oct 21 07:38  .viminfo
-    -rw-rw-r--  1 ctfplayer ctfplayer     165 Oct 20 13:10  .wget-hsts
-    drwxrwxr-x  2 ctfplayer ctfplayer    4096 Oct 19 21:49  Downloads
-    -rwxrwxr-x  1 ctfplayer ctfplayer       0 Oct 17 21:14  bof1
-    -rwxrwxr-x  1 ctfplayer ctfplayer      16 Oct 15 11:51  bof1.save
-    drwxrwxr-x  2 ctfplayer ctfplayer    4096 Oct 16 07:06  bof_lab
-    -rw-rw-r--  1 ctfplayer ctfplayer     131 Oct 14 23:11  cookies.txt
-    -rwxrwxr-x  1 ctfplayer ctfplayer    2894 Oct 20 13:08  crack_md4_of_md5.py
-    -rw-rw-r--  1 ctfplayer ctfplayer 2666133 Oct 10 09:58 ctf_activity.zip?    token=eyJ1c2VyX2lkIjo0MDksInRlYW1faWQiOm51bGwsImZpbGVfaWQiOjcyfQ.aPX7Xw.MRSa-eFrViolAcb3cFU8y5RNjHU
-    -rw-rw-r--  1 ctfplayer ctfplayer      33 Oct 17 12:04  'cyberstars_flag.txt'
-    -rwxrwxr-x  1 ctfplayer ctfplayer       0 Oct 17 13:38  exploit_final.bin
-    drwxrwxr-x  2 ctfplayer ctfplayer    4096 Oct 20 20:16  file_ops
-    -rw-rw-r--  1 ctfplayer ctfplayer      33 Oct 20 21:12  hash.txt
-    -rw-rw-r--  1 ctfplayer ctfplayer     276 Oct 14 23:11  login_response.html
-    drwxr-xr-x  2 root      root         4096 Oct 10 08:24  logs
-    drwxr-xr-x  3 root      root         4096 Oct 10 07:04  logxd
-    -rw-rw-r--  1 ctfplayer ctfplayer       0 Oct 20 13:13  md5_hex_list.txt
-    -rw-rw-r--  1 ctfplayer ctfplayer       0 Oct 20 13:10  rockyou.txt
-    drwxr-xr-x  2 root      root         4096 Oct 10 07:11  runx
-    drwxr-xr-x  2 root      root         4096 Oct 10 07:25  strix
-    -rwxrwxr-x  1 ctfplayer ctfplayer    2394 Oct 20 13:15  try_crack.py
-    -rw-rw-r--  1 ctfplayer ctfplayer       0 Oct 21 19:55  wc
-    -rw-rw-r--  1 ctfplayer ctfplayer      46 Oct 20 13:06  wordlist.txt
+   ```bash
+   ctfplayer@CTFDPROD:~$ 'ls -la'
+   total 2692
+   drwxr-x--- 11 ctfplayer ctfplayer    4096 Oct 22 13:41  .
+   drwxr-xr-x  4 root      root         4096 Aug 27 19:15  ..
+   -r--r--r--  1 root      root            0 Oct  3 09:00  .bash_history
+   drwx------  2 ctfplayer ctfplayer    4096 Oct 20 09:01  .cache
+   -rw-------  1 ctfplayer ctfplayer      20 Oct 22 13:41  .lesshst
+   drwxrwxr-x  3 ctfplayer ctfplayer    4096 Oct 21 11:51  .local
+   -rw-------  1 ctfplayer ctfplayer    1187 Oct 21 07:38  .viminfo
+   -rw-rw-r--  1 ctfplayer ctfplayer     165 Oct 20 13:10  .wget-hsts
+   drwxrwxr-x  2 ctfplayer ctfplayer    4096 Oct 19 21:49  Downloads
+   -rwxrwxr-x  1 ctfplayer ctfplayer       0 Oct 17 21:14  bof1
+   -rwxrwxr-x  1 ctfplayer ctfplayer      16 Oct 15 11:51  bof1.save
+   drwxrwxr-x  2 ctfplayer ctfplayer    4096 Oct 16 07:06  bof_lab
+   -rw-rw-r--  1 ctfplayer ctfplayer     131 Oct 14 23:11  cookies.txt
+   -rwxrwxr-x  1 ctfplayer ctfplayer    2894 Oct 20 13:08  crack_md4_of_md5.py
+   -rw-rw-r--  1 ctfplayer ctfplayer 2666133 Oct 10 09:58 ctf_activity.zip?    token=eyJ1c2VyX2lkIjo0MDksInRlYW1faWQiOm51bGwsImZpbGVfaWQiOjcyfQ.aPX7Xw.MRSa-eFrViolAcb3cFU8y5RNjHU
+   -rw-rw-r--  1 ctfplayer ctfplayer      33 Oct 17 12:04  'cyberstars_flag.txt'
+   -rwxrwxr-x  1 ctfplayer ctfplayer       0 Oct 17 13:38  exploit_final.bin
+   drwxrwxr-x  2 ctfplayer ctfplayer    4096 Oct 20 20:16  file_ops
+   -rw-rw-r--  1 ctfplayer ctfplayer      33 Oct 20 21:12  hash.txt
+   -rw-rw-r--  1 ctfplayer ctfplayer     276 Oct 14 23:11  login_response.html
+   drwxr-xr-x  2 root      root         4096 Oct 10 08:24  logs
+   drwxr-xr-x  3 root      root         4096 Oct 10 07:04  logxd
+   -rw-rw-r--  1 ctfplayer ctfplayer       0 Oct 20 13:13  md5_hex_list.txt
+   -rw-rw-r--  1 ctfplayer ctfplayer       0 Oct 20 13:10  rockyou.txt
+   drwxr-xr-x  2 root      root         4096 Oct 10 07:11  runx
+   drwxr-xr-x  2 root      root         4096 Oct 10 07:25  strix
+   -rwxrwxr-x  1 ctfplayer ctfplayer    2394 Oct 20 13:15  try_crack.py
+   -rw-rw-r--  1 ctfplayer ctfplayer       0 Oct 21 19:55  wc
+   -rw-rw-r--  1 ctfplayer ctfplayer      46 Oct 20 13:06  wordlist.txt
 
-    ctfplayer@CTFDPROD:~$ 'cat cyberstars_flag.txt'
-    'cyberstars{run_s4n1ty_run_4_ucc}'
-    ```
+   ctfplayer@CTFDPROD:~$ 'cat cyberstars_flag.txt'
+   'cyberstars{run_s4n1ty_run_4_ucc}'
+   ```
 
 ## Strings Operations
 
@@ -248,6 +252,10 @@ $ 'grep " 404 " ctf_activity.log | wc -l'
 ## File-0ps6
 
 ![File-0ps6](./images/File-0ps6.png)
+
+```bash
+'cyberstars{196}'
+```
 
 ## File-0ps7
 
